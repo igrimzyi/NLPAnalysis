@@ -6,6 +6,9 @@ import seaborn as sns;
 import nltk 
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+nltk.download('vader_lexicon')
 
 from nltk.sentiment import SentimentIntensityAnalyzer;
 from tqdm.notebook import tqdm
@@ -46,3 +49,9 @@ entities = nltk.chunk.ne_chunk(tagged);
 entities.pprint()
 
 sia = SentimentIntensityAnalyzer()
+
+print(sia.polarity_scores(example))
+
+for i, row in tqdm(df.iterrows(), total=len(df)):
+    text = row['Text'];
+    myid = row['Id']
