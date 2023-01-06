@@ -13,7 +13,7 @@ plt.style.use('ggplot')
 
 
 df = pd.read_csv('./Reviews.csv')
-
+# df head
 df.head()
 
 ax = df['Score'].value_counts().sort_index() \
