@@ -1,3 +1,4 @@
+#imports
 import pandas as pd;
 import numpy as np; 
 import matplotlib.pyplot as plt;
@@ -34,11 +35,15 @@ tokens[:10]
 
 nltk.pos_tag(tokens); 
 
+
+#nltk tags 
 tagged = nltk.pos_tag(tokens);
 tagged[:10];
 
 entities = nltk.chunk.ne_chunk(tagged)
 entities.pprint()
+
+#sentiment analysis
 
 from nltk.sentiment import SentimentIntensityAnalyzer
 from tqdm import tqdm
